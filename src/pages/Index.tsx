@@ -61,7 +61,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 pb-20">
       <div className="max-w-md mx-auto">
-        <TabsContent value="home" className={activeTab === 'home' ? '' : 'hidden'}>
+        <Tabs value={activeTab} onValueChange={setActiveTab}>
+        <TabsContent value="home">
           <div className="p-4 space-y-4">
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-2xl font-bold text-slate-800">Петербуржец</h1>
@@ -335,6 +336,7 @@ const Index = () => {
             </div>
           </div>
         </TabsContent>
+        </Tabs>
       </div>
 
       <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-2xl">
